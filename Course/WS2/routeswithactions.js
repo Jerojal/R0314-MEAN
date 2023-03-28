@@ -14,7 +14,7 @@ var server = http.createServer(function(request,response)
         response.write(data);
           
         }}
-    if(request.url === "/contact")
+    else if(request.url === "/contact")
     {       
          var fs = require("fs");
         fs.readFile('contact.html', results);
@@ -26,11 +26,11 @@ var server = http.createServer(function(request,response)
         
     }
 
-    if(request.url === "/plaintext")
+    else if(request.url === "/plaintext")
     {       
          var fs = require("fs");
-        fs.readFile('contact.html', results);
-        response.writeHead(200,{'Content-Type':'text/plain'})
+        fs.readFile('example.txt', results);
+        response.writeHead(200,{'Content-Type':'text/text'})
         function results(err, data){
         if (err) return console.error(err);
         response.write(data);
@@ -38,10 +38,10 @@ var server = http.createServer(function(request,response)
         
     }
 
-    if(request.url === "/json")
+    else if(request.url === "/json")
     {       
          var fs = require("fs");
-        fs.readFile('contact.html', results);
+        fs.readFile('sampledata.json', results);
         response.writeHead(200,{'Content-Type':'text/json'})
         function results(err, data){
         if (err) return console.error(err);
