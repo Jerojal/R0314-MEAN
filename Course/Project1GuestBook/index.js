@@ -1,9 +1,5 @@
 const PORT = process.env.PORT || 3000;
 var http = require('http');
-http.createServer(function(req, res) {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello World\n');
-  }).listen(port);
 
 
 var express = require('express');
@@ -83,8 +79,6 @@ app.get('*', function (req, res) {
     res.send('404');
 });
 
-http
-    .createServer(function (req, res) {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.end('<h1>Hello World</h1>');})
-    .listen(PORT);
+app.listen(PORT, function () {
+    console.log('Example app listening on port 8080!');
+  });
