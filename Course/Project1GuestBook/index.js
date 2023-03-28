@@ -80,10 +80,9 @@ app.get('*', function (req, res) {
 });
 
 http
-    app.createServer(function (req, res) {
+    .createServer(function (req, res) {
         res.writeHead(200, { 'Content-Type': 'text/html' });
-    res.end();})
-
-    app.listen(PORT);
+        res.end('<h1>Hello World</h1>');})
+    .listen(PORT);
 
   
