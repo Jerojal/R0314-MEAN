@@ -4,5 +4,7 @@
     "azureFunctions.projectLanguage": "JavaScript",
     "azureFunctions.projectRuntime": "~4",
     "debug.internalConsoleOptions": "neverOpen",
-    "azureFunctions.preDeployTask": "npm prune (functions)"
+    "azureFunctions.preDeployTask": "npm prune (functions)",
+    "appService.defaultWebAppToDeploy": "undefined/subscriptions/cb53bf72-cce1-4fa6-ab5c-b1fe2f660234/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/Project1GuestbookJerOjal",
+    "appService.deploySubpath": "."
 }
